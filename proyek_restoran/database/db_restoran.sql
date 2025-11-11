@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Nov 2025 pada 13.49
+-- Waktu pembuatan: 11 Nov 2025 pada 16.52
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -33,6 +33,22 @@ CREATE TABLE `kategori` (
   `deskripsi` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data untuk tabel `kategori`
+--
+
+INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `deskripsi`) VALUES
+(1, 'Makanan Berat', NULL),
+(2, 'Makanan Ringan', NULL),
+(3, 'Minuman Dingin', NULL),
+(4, 'Minuman Panas', NULL),
+(5, 'Dessert', NULL),
+(6, 'Snack', NULL),
+(7, 'Seafood', NULL),
+(8, 'Fast Food', NULL),
+(9, 'Sayuran', NULL),
+(10, 'Paket Spesial', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -47,6 +63,22 @@ CREATE TABLE `menu` (
   `id_kategori` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data untuk tabel `menu`
+--
+
+INSERT INTO `menu` (`id_menu`, `nama_menu`, `harga`, `stok`, `id_kategori`) VALUES
+(1, 'Nasi Goreng Spesial', 25000, 0, 1),
+(2, 'Ayam Geprek Sambal Ijo', 20000, 0, 1),
+(3, 'Keripik Pisang', 8000, 0, 2),
+(4, 'Kopi Hitam', 10000, 0, 4),
+(5, 'Es Teh Manis', 7000, 0, 3),
+(6, 'Cheesecake', 15000, 0, 5),
+(7, 'Udang Saus Padang', 28000, 0, 7),
+(8, 'Burger Keju', 22000, 0, 8),
+(9, 'Tumis Kangkung', 12000, 0, 9),
+(10, 'Paket Hemat Ayam + Nasi + Teh', 30000, 0, 10);
+
 -- --------------------------------------------------------
 
 --
@@ -59,6 +91,22 @@ CREATE TABLE `pelanggan` (
   `email` varchar(100) NOT NULL,
   `no_hp` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `pelanggan`
+--
+
+INSERT INTO `pelanggan` (`id_pelanggan`, `nama_pelanggan`, `email`, `no_hp`) VALUES
+(1, 'Rina Putri', 'rina@example.com', '081234567890'),
+(2, 'Budi Santoso', 'budi@example.com', '081345678901'),
+(3, 'Andi Nugraha', 'andi@example.com', '085756789012'),
+(4, 'Nadia Lestari', 'nadia@example.com', '087867890123'),
+(5, 'Fajar Pratama', 'fajar@example.com', '081178901234'),
+(6, 'Tina Mulyani', 'tina@example.com', '082189012345'),
+(7, 'Rizky Hidayat', 'rizky@example.com', '089690123456'),
+(8, 'Citra Dewi', 'citra@example.com', '081501234567'),
+(9, 'Dani Ramadhan', 'dani@example.com', '085212345678'),
+(10, 'Sinta Amelia', 'sinta@example.com', '087723456789');
 
 --
 -- Indexes for dumped tables
@@ -92,19 +140,19 @@ ALTER TABLE `pelanggan`
 -- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id_menu` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_menu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
@@ -120,42 +168,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
--- Data kategori
-INSERT INTO kategori (nama_kategori) VALUES
-('Makanan Berat'),
-('Makanan Ringan'),
-('Minuman Dingin'),
-('Minuman Panas'),
-('Dessert'),
-('Snack'),
-('Seafood'),
-('Fast Food'),
-('Sayuran'),
-('Paket Spesial');
-
--- Data menu
-INSERT INTO menu (nama_menu, harga, id_kategori) VALUES
-('Nasi Goreng Spesial', 25000, 1),
-('Ayam Geprek Sambal Ijo', 20000, 1),
-('Keripik Pisang', 8000, 2),
-('Kopi Hitam', 10000, 4),
-('Es Teh Manis', 7000, 3),
-('Cheesecake', 15000, 5),
-('Udang Saus Padang', 28000, 7),
-('Burger Keju', 22000, 8),
-('Tumis Kangkung', 12000, 9),
-('Paket Hemat Ayam + Nasi + Teh', 30000, 10);
-
--- Data pelanggan
-INSERT INTO pelanggan (nama_pelanggan, email) VALUES
-('Rina Putri', 'rina@example.com'),
-('Budi Santoso', 'budi@example.com'),
-('Andi Nugraha', 'andi@example.com'),
-('Nadia Lestari', 'nadia@example.com'),
-('Fajar Pratama', 'fajar@example.com'),
-('Tina Mulyani', 'tina@example.com'),
-('Rizky Hidayat', 'rizky@example.com'),
-('Citra Dewi', 'citra@example.com'),
-('Dani Ramadhan', 'dani@example.com'),
-('Sinta Amelia', 'sinta@example.com');
