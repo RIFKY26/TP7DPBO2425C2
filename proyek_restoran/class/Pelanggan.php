@@ -1,5 +1,4 @@
 <?php
-// File: class/Pelanggan.php
 
 class Pelanggan {
     private $conn;
@@ -40,8 +39,7 @@ class Pelanggan {
         $stmt = $this->conn->prepare($sql);
         $stmt->execute([$nama, $email, $no_hp, $id]);
         return $stmt;
-    }
-    
+    }    
 
     public function delete($id) {
         $sql = "DELETE FROM " . $this->table_name . " WHERE id_pelanggan = ?";

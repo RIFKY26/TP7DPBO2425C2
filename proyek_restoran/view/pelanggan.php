@@ -1,6 +1,4 @@
 <?php
-// File: pelanggan.php (Letakkan di folder root atau di dalam /view/)
-
 // 1. Memuat file Class dan Koneksi
 include 'config/db.php';
 include 'class/Pelanggan.php';

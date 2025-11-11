@@ -1,5 +1,4 @@
 <?php
-// File: class/Kategori.php
 
 class Kategori {
     private $conn;

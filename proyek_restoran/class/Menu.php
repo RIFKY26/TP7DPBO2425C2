@@ -1,5 +1,4 @@
 <?php
-// File: class/Menu.php
 
 class Menu {
     private $conn;

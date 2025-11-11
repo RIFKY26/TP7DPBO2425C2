@@ -1,5 +1,4 @@
 <?php
-// File: kategori.php (Letakkan di folder root)
 
 // 1. Memuat file Class dan Koneksi
 include 'config/db.php';

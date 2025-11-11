@@ -1,9 +1,8 @@
 <?php
-// File: config/db.php
 
 class Database {
     private $host = "localhost";
-    private $db_name = "db_restoran"; // Ganti dengan nama database Anda
+    private $db_name = "db_restoran";
     private $username = "root";
     private $password = "";
     public $conn;

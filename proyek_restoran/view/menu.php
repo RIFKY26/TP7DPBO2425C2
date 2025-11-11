@@ -1,5 +1,4 @@
 <?php
-// File: menu.php
 
 // 1. Memuat file Class dan Koneksi
 include 'config/db.php';

@@ -1,5 +1,4 @@
 <?php
-// File: index.php
 
 // Enable output buffering so header() in views works for redirects
 ob_start();
