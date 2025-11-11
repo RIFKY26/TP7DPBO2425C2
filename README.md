@@ -91,6 +91,14 @@ File ini mengatur perpindahan halaman menggunakan parameter ?page= dan memanggil
   - Hapus Data: Menghapus baris tertentu berdasarkan ID.
 ## 4. Keamanan Query
   - Semua query dijalankan menggunakan Prepared Statement (PDO) untuk mencegah SQL Injection.
+
+# Dokumentasi
+
+![bandicam 2025-11-11 22-23-17-934](https://github.com/user-attachments/assets/f124a5fe-e4dc-40a3-a71b-338e18f2b27d)
+![bandicam 2025-11-11 22-33-31-756](https://github.com/user-attachments/assets/61710ff1-3db3-4167-911f-40ae5cf053a3)
+![bandicam 2025-11-11 22-56-20-880](https://github.com/user-attachments/assets/3fea075a-6072-4be3-833b-79b14da09a5b)
+
+
     
       
       
